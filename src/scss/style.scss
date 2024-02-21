@@ -1,38 +1,48 @@
+$primary-color: #787878;
+$font-stack: Quando;
 body {
-    font-family: Quando;
+    font-family: $font-stack;
     font-size: 15px;
-    color: #836b00;
+    color: $primary-color;
 }
 img {
     max-width: 100%;
     height: auto;
 }
+$margin-main: 25px;
+$main-line-height: 1.6em;
 p {
-    margin-bottom: 25px;
-    line-height: 1.6em;
+    margin-bottom: $margin-main;
+    line-height: $main-line-height;
 }
+$main-weight: 400;
+$text-decoration-main: none;
+$main-color-text: #111111;
 a {
-    font-weight: 400;
-    text-decoration: none;
-    color: #111111;
+    font-weight: $main-weight;
+    text-decoration: $text-decoration-main;
+    color: $main-color-text;
     transition: .20s;
 }
+$hover-main-color: #999999;
 a:hover {
-    color: #8b0000;
+    color: $hover-main-color;
 }
+$headers-margin-1: 25px;
+$headers-margin-2: 20px;
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin-top: 25px;
-    margin-bottom: 20px;
+    margin-top: $headers-margin-1;
+    margin-bottom: $headers-margin-2;
     font-family: 'Josefin Sans', sans-serif;
-    font-weight: 400;
+    font-weight: $main-weight;
     line-height: 1.3em;
     word-wrap: break-word;
-    color: #111111;
+    color: $main-color-text;
 }
 h1 {
     font-size: 37px;
@@ -64,8 +74,12 @@ h6 {
 header {
     font-family: 'Josefin Sans', sans-serif;
 }
-header nav ul {
-    display: none;
+header {
+    nav {
+        ul {
+        display: none;
+    }
+}
 }
 
 .top-logo {
@@ -88,7 +102,8 @@ article {
 .post-title {
     margin-top: 0;
 }
-.post-title a {
+.post-title {
+    a {
     color: #324360;
     text-transform: uppercase;
     font-size: 26px;
@@ -97,6 +112,7 @@ article {
     margin-bottom: 15px;
     line-height: 1.3em;
     transition: all .3s ease;
+    }
 }
 .post-title a:hover {
     color: #35c4ce;
@@ -111,11 +127,15 @@ footer {
     background: #eaf2ff;
     color: #989898;
 }
-#footer a {
-    color: #989898;
+#footer {
+    a {
+        color: #989898;
+    }
 }
-#footer a:hover {
+#footer {
+    a:hover {
     color: #111111;
+    }
 }
 .footer-logo {
     width: 200px;
@@ -127,14 +147,20 @@ footer {
     padding: 20px 0;
     line-height: 2em;
 }
-.footer-social-links a {
+.footer-social-links {
+    a {
     margin: 0 10px;
     font-size: 16px;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.footer-social-links a span {
+}
+.footer-social-links {
+    a {
+        span {
     display: none;
+        }
+    }
 }
 #footer-copyright {
     padding: 20px 0;
